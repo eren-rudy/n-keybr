@@ -4,10 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
+    "@keybr/combo-history": "*",
     "@keybr/debug": "*",
     "@keybr/intl": "*",
     "@keybr/keyboard": "*",
     "@keybr/page-account": "*",
+    "@keybr/page-combinations": "*",
     "@keybr/page-help": "*",
     "@keybr/page-highscores": "*",
     "@keybr/page-layouts": "*",

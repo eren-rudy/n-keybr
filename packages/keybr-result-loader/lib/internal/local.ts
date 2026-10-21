@@ -1,10 +1,10 @@
-import { type Result } from "@keybr/result";
-import { resultFromJson, resultToJson } from "@keybr/result-io";
 import {
   type DBDatabase,
   DBNamedFactory,
   type DBTransaction,
-} from "./indexeddb/index.ts";
+} from "@keybr/indexeddb";
+import { type Result } from "@keybr/result";
+import { resultFromJson, resultToJson } from "@keybr/result-io";
 import { type LocalResultStorage } from "./types.ts";
 
 export class PersistentResultStorage implements LocalResultStorage {

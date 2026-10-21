@@ -22,6 +22,7 @@ for (const path of [
   "/profile/example3",
   "/profile/example4",
   "/profile/example5",
+  "/combinations",
   "/typing-test",
   "/terms-of-service",
   "/privacy-policy",

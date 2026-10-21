@@ -107,6 +107,7 @@ function Content({ page }: { readonly page: PageInfo }) {
           {[
             Pages.practice,
             Pages.profile,
+            Pages.combinations,
             Pages.typingTest,
             Pages.multiplayer,
             Pages.layouts,

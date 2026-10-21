@@ -22,6 +22,7 @@ export function main() {
 }
 
 const AccountPage = lazy(() => import("./pages/account.tsx"));
+const CombinationsPage = lazy(() => import("./pages/combinations.tsx"));
 const HelpPage = lazy(() => import("./pages/help.tsx"));
 const HighScorePage = lazy(() => import("./pages/high-scores.tsx"));
 const LayoutsPage = lazy(() => import("./pages/layouts.tsx"));
@@ -138,6 +139,17 @@ function PageRoutes() {
               <Title page={Pages.profile} />
               <Suspense fallback={<LoadingProgress />}>
                 <ProfilePage />
+              </Suspense>
+            </Template>
+          }
+        />
+        <Route
+          path={Pages.combinations.path}
+          element={
+            <Template path={Pages.combinations.path}>
+              <Title page={Pages.combinations} />
+              <Suspense fallback={<LoadingProgress />}>
+                <CombinationsPage />
               </Suspense>
             </Template>
           }

@@ -92,6 +92,19 @@ export class Controller {
     return this.renderPage(ctx, Pages.profile, intl);
   }
 
+  @http.GET(`${Pages.combinations.path}`)
+  async ["combinations"](ctx: Context<RouterState & AuthState>) {
+    return this.renderPage(ctx, Pages.combinations);
+  }
+
+  @http.GET(`/{locale:${localePattern}}${Pages.combinations.path}`)
+  async ["combinations-i18n"](
+    ctx: Context<RouterState & AuthState>,
+    @pathParam("locale", pIntl) intl: IntlShape,
+  ) {
+    return this.renderPage(ctx, Pages.combinations, intl);
+  }
+
   @http.GET(`${Pages.help.path}`)
   async ["help"](ctx: Context<RouterState & AuthState>) {
     return this.renderPage(ctx, Pages.help);

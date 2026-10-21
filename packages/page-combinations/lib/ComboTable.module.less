@@ -1,0 +1,86 @@
+@import "@keybr/widget/lib/index.less";
+
+.table,
+.historyTable {
+  border-collapse: collapse;
+
+  th {
+    text-transform: uppercase;
+  }
+
+  td,
+  th {
+    .text-no-wrap();
+    padding-inline: 0.75rem;
+    padding-block: 0.25rem;
+    border-block-end: var(--separator-border);
+    text-align: start;
+  }
+
+  .numeric {
+    text-align: end;
+  }
+}
+
+.table {
+  inline-size: 100%;
+  margin-block: 1rem;
+}
+
+.sortButton {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: none;
+  font: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.row {
+  cursor: pointer;
+}
+
+.row:hover {
+  background-color: var(--primary-d1);
+}
+
+.selected,
+.selected:hover {
+  background-color: var(--primary-d2);
+}
+
+.combo {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: none;
+  font-family: var(--monospace-font-family);
+  font-size: 1.25rem;
+  font-weight: bold;
+  white-space: pre;
+  cursor: pointer;
+}
+
+.historyRow > td {
+  padding-block: 1rem;
+  background-color: var(--primary-l1);
+}
+
+.history {
+  margin-inline: 2rem;
+}
+
+.historyTable {
+  margin-block: 1rem;
+}
+
+.hit {
+  color: var(--Value--more__color);
+}
+
+.miss {
+  color: var(--textinput--miss__color);
+}

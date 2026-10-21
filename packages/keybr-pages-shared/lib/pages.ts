@@ -1,5 +1,6 @@
 import { defaultLocale } from "@keybr/intl";
 import {
+  mdiAlphabeticalVariant,
   mdiCarSide,
   mdiChartAreaspline,
   mdiHelpCircleOutline,
@@ -109,6 +110,27 @@ export namespace Pages {
           "The detailed statistics regarding your learning progress.",
       }),
       icon: mdiChartAreaspline,
+    },
+    meta: [{ name: "robots", content: "noindex" }],
+  } satisfies PageInfo;
+
+  export const combinations = {
+    path: "/combinations",
+    title: defineMessage({
+      id: "t_Key_Combinations",
+      defaultMessage: "Key Combinations",
+    }),
+    link: {
+      label: defineMessage({
+        id: "t_Combos",
+        defaultMessage: "Combos",
+      }),
+      title: defineMessage({
+        id: "page.combinations.description",
+        defaultMessage:
+          "The complete history of every key and key pair that you type.",
+      }),
+      icon: mdiAlphabeticalVariant,
     },
     meta: [{ name: "robots", content: "noindex" }],
   } satisfies PageInfo;

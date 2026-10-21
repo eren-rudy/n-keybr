@@ -1,4 +1,5 @@
 import { test } from "node:test";
+import { ComboStorageContext, FakeComboStorage } from "@keybr/combo-history";
 import { FakeIntlProvider } from "@keybr/intl";
 import { type PageData, PageDataContext } from "@keybr/pages-shared";
 import { FakePhoneticModel } from "@keybr/phonetic-model";
@@ -20,7 +21,9 @@ test("render", async () => {
       >
         <FakeSettingsContext>
           <FakeResultContext initialResults={faker.nextResultList(100)}>
-            <PracticePage />
+            <ComboStorageContext.Provider value={new FakeComboStorage()}>
+              <PracticePage />
+            </ComboStorageContext.Provider>
           </FakeResultContext>
         </FakeSettingsContext>
       </PageDataContext.Provider>

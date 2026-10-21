@@ -1,3 +1,4 @@
+import { makeComboSamples, useComboStorage } from "@keybr/combo-history";
 import { catchError } from "@keybr/debug";
 import { KeyboardProvider } from "@keybr/keyboard";
 import { schedule } from "@keybr/lang";
@@ -22,6 +23,7 @@ export function PracticeScreen() {
 
 function ProgressUpdater({ lesson }: { readonly lesson: Lesson }) {
   const { results, appendResults } = useResults();
+  const comboStorage = useComboStorage();
   const [progress, { total, current }] = useProgress(lesson, results);
   if (progress == null) {
     return <LoadingProgress total={total} current={current} />;
@@ -29,10 +31,19 @@ function ProgressUpdater({ lesson }: { readonly lesson: Lesson }) {
     return (
       <Controller
         progress={progress}
-        onResult={(result) => {
+        onResult={(result, steps) => {
           if (result.validate()) {
             progress.append(result, displayEvent);
             appendResults([result]);
+            comboStorage
+              .append(
+                makeComboSamples(steps, {
+                  layout: result.layout.id,
+                  // Step time stamps are on the performance.now() clock.
+                  timeOrigin: Date.now() - performance.now(),
+                }),
+              )
+              .catch(catchError);
           }
         }}
       />

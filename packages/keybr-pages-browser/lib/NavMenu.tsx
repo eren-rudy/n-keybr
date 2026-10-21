@@ -35,6 +35,10 @@ export function NavMenu({ currentPath }: { readonly currentPath: string }) {
       </MenuItem>
 
       <MenuItem>
+        <MenuItemLink page={Pages.combinations} />
+      </MenuItem>
+
+      <MenuItem>
         <MenuItemLink page={Pages.help} />
       </MenuItem>
 

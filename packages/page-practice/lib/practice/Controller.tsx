@@ -1,6 +1,6 @@
 import { type KeyId, useKeyboard } from "@keybr/keyboard";
 import { type Result } from "@keybr/result";
-import { type LineList } from "@keybr/textinput";
+import { type LineList, type Step } from "@keybr/textinput";
 import { addKey, deleteKey, emulateLayout } from "@keybr/textinput-events";
 import { makeSoundPlayer } from "@keybr/textinput-sounds";
 import {
@@ -23,7 +23,7 @@ export const Controller = memo(function Controller({
   onResult,
 }: {
   readonly progress: Progress;
-  readonly onResult: (result: Result) => void;
+  readonly onResult: (result: Result, steps: readonly Step[]) => void;
 }): ReactNode {
   const {
     state,
@@ -57,7 +57,7 @@ export const Controller = memo(function Controller({
 
 function useLessonState(
   progress: Progress,
-  onResult: (result: Result) => void,
+  onResult: (result: Result, steps: readonly Step[]) => void,
 ) {
   const keyboard = useKeyboard();
   const timeout = useTimeout();
@@ -74,7 +74,7 @@ function useLessonState(
     const state = new LessonState(progress, (result, textInput) => {
       setKey(key + 1);
       lastLessonRef.current = makeLastLesson(result, textInput.steps);
-      onResultRef.current(result);
+      onResultRef.current(result, textInput.steps);
     });
     state.lastLesson = lastLessonRef.current;
     setLines(state.lines);
