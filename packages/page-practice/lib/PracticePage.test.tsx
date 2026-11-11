@@ -1,11 +1,11 @@
 import { test } from "node:test";
-import { ComboStorageContext, FakeComboStorage } from "@keybr/combo-history";
 import { FakeIntlProvider } from "@keybr/intl";
 import { type PageData, PageDataContext } from "@keybr/pages-shared";
 import { FakePhoneticModel } from "@keybr/phonetic-model";
 import { PhoneticModelLoader } from "@keybr/phonetic-model-loader";
 import { FakeResultContext, ResultFaker } from "@keybr/result";
 import { FakeSettingsContext } from "@keybr/settings";
+import { FakeTypingLogStorage, TypingLogContext } from "@keybr/typing-log";
 import { fireEvent, render } from "@testing-library/react";
 import { PracticePage } from "./PracticePage.tsx";
 
@@ -21,9 +21,9 @@ test("render", async () => {
       >
         <FakeSettingsContext>
           <FakeResultContext initialResults={faker.nextResultList(100)}>
-            <ComboStorageContext.Provider value={new FakeComboStorage()}>
+            <TypingLogContext.Provider value={new FakeTypingLogStorage()}>
               <PracticePage />
-            </ComboStorageContext.Provider>
+            </TypingLogContext.Provider>
           </FakeResultContext>
         </FakeSettingsContext>
       </PageDataContext.Provider>

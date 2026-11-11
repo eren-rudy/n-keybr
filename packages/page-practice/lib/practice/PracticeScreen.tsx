@@ -1,4 +1,3 @@
-import { makeComboSamples, useComboStorage } from "@keybr/combo-history";
 import { catchError } from "@keybr/debug";
 import { KeyboardProvider } from "@keybr/keyboard";
 import { schedule } from "@keybr/lang";
@@ -7,6 +6,7 @@ import { LessonLoader } from "@keybr/lesson-loader";
 import { LoadingProgress } from "@keybr/pages-shared";
 import { type Result, useResults } from "@keybr/result";
 import { useSettings } from "@keybr/settings";
+import { makeLessonLog, useTypingLog } from "@keybr/typing-log";
 import { useEffect, useMemo, useState } from "react";
 import { Controller } from "./Controller.tsx";
 import { displayEvent, Progress } from "./state/index.ts";
@@ -23,7 +23,7 @@ export function PracticeScreen() {
 
 function ProgressUpdater({ lesson }: { readonly lesson: Lesson }) {
   const { results, appendResults } = useResults();
-  const comboStorage = useComboStorage();
+  const typingLog = useTypingLog();
   const [progress, { total, current }] = useProgress(lesson, results);
   if (progress == null) {
     return <LoadingProgress total={total} current={current} />;
@@ -31,15 +31,21 @@ function ProgressUpdater({ lesson }: { readonly lesson: Lesson }) {
     return (
       <Controller
         progress={progress}
-        onResult={(result, steps) => {
+        onResult={(result) => {
           if (result.validate()) {
             progress.append(result, displayEvent);
             appendResults([result]);
-            comboStorage
+          }
+        }}
+        onLesson={({ result, steps, events }) => {
+          if (result.validate()) {
+            typingLog
               .append(
-                makeComboSamples(steps, {
+                makeLessonLog({
+                  steps,
+                  events,
                   layout: result.layout.id,
-                  // Step time stamps are on the performance.now() clock.
+                  // Event time stamps are on the performance.now() clock.
                   timeOrigin: Date.now() - performance.now(),
                 }),
               )

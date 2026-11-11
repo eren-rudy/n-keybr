@@ -1,26 +1,18 @@
 import { test } from "node:test";
-import {
-  type ComboSample,
-  type ComboStats,
-  makeComboStats,
-  summarizeAll,
-} from "@keybr/combo-history";
+import { type ComboStats } from "@keybr/typing-log";
 import { deepEqual } from "rich-assert";
 import { defaultSort, filterStats, nextSort, sortStats } from "./sort.ts";
 
-const stats = makeStats([
+const stats = [
   // Typed twice, 200ms on average.
-  sample("a", 100, 100),
-  sample("a", 300, 300),
+  stats1("a", 2, 0, 200),
   // Typed three times with an error, 400ms on average.
-  sample("ab", 200, 400),
-  sample("ab", 200, 400),
-  sample("ab", 200, 400, true),
+  stats1("ab", 3, 1, 400),
   // Typed once with an error, so has no times.
-  sample("b", 500, 500, true),
+  stats1("b", 1, 1, null),
   // Typed once, 100ms.
-  sample("c", 100, 100),
-]);
+  stats1("c", 1, 0, 100),
+];
 
 const compare = (a: string, b: string) => a.localeCompare(b);
 
@@ -76,45 +68,42 @@ test("next sort", () => {
 });
 
 test("filter combinations", () => {
-  deepEqual(
-    combos(filterStats(stats, { length: null, minCount: 1, query: "" })),
-    ["a", "ab", "b", "c"],
-  );
-  deepEqual(combos(filterStats(stats, { length: 1, minCount: 1, query: "" })), [
+  deepEqual(combos(filterStats(stats, { minCount: 1, query: "" })), [
     "a",
+    "ab",
     "b",
     "c",
   ]);
-  deepEqual(combos(filterStats(stats, { length: 2, minCount: 1, query: "" })), [
+  deepEqual(combos(filterStats(stats, { minCount: 2, query: "" })), [
+    "a",
     "ab",
   ]);
-  deepEqual(
-    combos(filterStats(stats, { length: null, minCount: 2, query: "" })),
-    ["a", "ab"],
-  );
-  deepEqual(
-    combos(filterStats(stats, { length: null, minCount: 1, query: "b" })),
-    ["ab", "b"],
-  );
+  deepEqual(combos(filterStats(stats, { minCount: 1, query: "b" })), [
+    "ab",
+    "b",
+  ]);
 });
 
-function makeStats(samples: readonly ComboSample[]): ComboStats[] {
-  return summarizeAll(samples).map(makeComboStats);
-}
-
-function sample(
+function stats1(
   combo: string,
-  timeToInitiate: number,
-  timeToType: number,
-  miss = false,
-): ComboSample {
+  count: number,
+  missCount: number,
+  timeToType: number | null,
+): ComboStats {
+  const length = [...combo].length;
   return {
     layout: "en-us",
     combo,
-    completedAt: 1000,
-    timeToInitiate,
+    length,
+    count,
+    correctCount: count - missCount,
+    missCount,
+    accuracy: (count - missCount) / count,
+    timeToInitiate: timeToType != null ? timeToType / 2 : null,
     timeToType,
-    miss,
+    speed: timeToType != null ? (length * 60000) / timeToType : null,
+    firstCompletedAt: 1000,
+    lastCompletedAt: 1000,
   };
 }
 

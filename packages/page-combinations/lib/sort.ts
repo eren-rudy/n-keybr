@@ -1,4 +1,4 @@
-import { type ComboStats } from "@keybr/combo-history";
+import { type ComboStats } from "@keybr/typing-log";
 
 export type SortKey =
   | "combo"
@@ -31,8 +31,6 @@ export function nextSort(sort: Sort, key: SortKey): Sort {
 }
 
 export type Filter = {
-  /** The number of keys, or null for any. */
-  readonly length: number | null;
   /** The smallest number of samples. */
   readonly minCount: number;
   /** The characters a combination must contain. */
@@ -41,13 +39,10 @@ export type Filter = {
 
 export function filterStats(
   list: readonly ComboStats[],
-  { length, minCount, query }: Filter,
+  { minCount, query }: Filter,
 ): ComboStats[] {
   return list.filter(
-    (stats) =>
-      (length == null || stats.length === length) &&
-      stats.count >= minCount &&
-      stats.combo.includes(query),
+    (stats) => stats.count >= minCount && stats.combo.includes(query),
   );
 }
 

@@ -1,7 +1,12 @@
 import { type KeyId, useKeyboard } from "@keybr/keyboard";
 import { type Result } from "@keybr/result";
-import { type LineList, type Step } from "@keybr/textinput";
-import { addKey, deleteKey, emulateLayout } from "@keybr/textinput-events";
+import { type LineList } from "@keybr/textinput";
+import {
+  addKey,
+  deleteKey,
+  emulateLayout,
+  type IKeyboardEvent,
+} from "@keybr/textinput-events";
 import { makeSoundPlayer } from "@keybr/textinput-sounds";
 import {
   useDocumentEvent,
@@ -9,7 +14,15 @@ import {
   useTimeout,
   useWindowEvent,
 } from "@keybr/widget";
-import { memo, type ReactNode, useMemo, useRef, useState } from "react";
+import {
+  memo,
+  type ReactNode,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { type CompletedLessonListener, LessonLogger } from "./lesson-logger.ts";
 import { Presenter } from "./Presenter.tsx";
 import {
   type LastLesson,
@@ -21,9 +34,16 @@ import {
 export const Controller = memo(function Controller({
   progress,
   onResult,
+  onLesson,
 }: {
   readonly progress: Progress;
-  readonly onResult: (result: Result, steps: readonly Step[]) => void;
+  /** Receives the result of a completed lesson right away. */
+  readonly onResult: (result: Result) => void;
+  /**
+   * Receives a completed lesson with all its key events, once the keys
+   * pressed at its end are released.
+   */
+  readonly onLesson: CompletedLessonListener;
 }): ReactNode {
   const {
     state,
@@ -32,7 +52,7 @@ export const Controller = memo(function Controller({
     handleKeyDown,
     handleKeyUp,
     handleInput,
-  } = useLessonState(progress, onResult);
+  } = useLessonState(progress, onResult, onLesson);
   useHotkeys({
     ["Ctrl+ArrowLeft"]: handleResetLesson,
     ["Ctrl+ArrowRight"]: handleSkipLesson,
@@ -57,7 +77,8 @@ export const Controller = memo(function Controller({
 
 function useLessonState(
   progress: Progress,
-  onResult: (result: Result, steps: readonly Step[]) => void,
+  onResult: (result: Result) => void,
+  onLesson: CompletedLessonListener,
 ) {
   const keyboard = useKeyboard();
   const timeout = useTimeout();
@@ -69,23 +90,36 @@ function useLessonState(
   const onResultRef = useRef(onResult);
   onResultRef.current = onResult;
 
+  const [logger] = useState(() => new LessonLogger());
+  useEffect(() => {
+    logger.setListener(onLesson);
+  }, [logger, onLesson]);
+  useEffect(() => {
+    return () => {
+      logger.flush();
+    };
+  }, [logger]);
+
   return useMemo(() => {
     // New lesson.
     const state = new LessonState(progress, (result, textInput) => {
       setKey(key + 1);
       lastLessonRef.current = makeLastLesson(result, textInput.steps);
-      onResultRef.current(result, textInput.steps);
+      onResultRef.current(result);
+      logger.complete(result, [...textInput.steps]);
     });
     state.lastLesson = lastLessonRef.current;
     setLines(state.lines);
     setDepressedKeys(state.depressedKeys);
     const handleResetLesson = () => {
+      logger.reset();
       state.resetLesson();
       setLines(state.lines);
       setDepressedKeys((state.depressedKeys = []));
       timeout.cancel();
     };
     const handleSkipLesson = () => {
+      logger.reset();
       state.skipLesson();
       setLines(state.lines);
       setDepressedKeys((state.depressedKeys = []));
@@ -107,6 +141,9 @@ function useLessonState(
           );
         },
         onInput: (event) => {
+          // Logs the input after the layout emulation, as the lesson sees it.
+          // It must be logged before the lesson completes with it.
+          logger.input(event);
           state.lastLesson = null;
           const feedback = state.onInput(event);
           setLines(state.lines);
@@ -119,9 +156,16 @@ function useLessonState(
       state,
       handleResetLesson,
       handleSkipLesson,
-      handleKeyDown: onKeyDown,
-      handleKeyUp: onKeyUp,
+      // Logs the physical key presses and releases.
+      handleKeyDown: (event: IKeyboardEvent) => {
+        logger.keyDown(event);
+        onKeyDown(event);
+      },
+      handleKeyUp: (event: IKeyboardEvent) => {
+        logger.keyUp(event);
+        onKeyUp(event);
+      },
       handleInput: onInput,
     };
-  }, [progress, keyboard, timeout, key]);
+  }, [progress, keyboard, timeout, key, logger]);
 }

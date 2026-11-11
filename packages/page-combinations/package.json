@@ -6,13 +6,13 @@
   "main": "lib/index.ts",
   "types": ".types/index.d.ts",
   "dependencies": {
-    "@keybr/combo-history": "*",
     "@keybr/debug": "*",
     "@keybr/intl": "*",
     "@keybr/keyboard": "*",
     "@keybr/lesson-ui": "*",
     "@keybr/pages-shared": "*",
     "@keybr/settings": "*",
+    "@keybr/typing-log": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

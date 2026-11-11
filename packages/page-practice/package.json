@@ -8,7 +8,7 @@
   "dependencies": {
     "@keybr/chart": "*",
     "@keybr/code": "*",
-    "@keybr/combo-history": "*",
+    "@keybr/typing-log": "*",
     "@keybr/content": "*",
     "@keybr/debug": "*",
     "@keybr/intl": "*",

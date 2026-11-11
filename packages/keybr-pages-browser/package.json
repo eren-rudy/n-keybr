@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@keybr/combo-history": "*",
     "@keybr/debug": "*",
     "@keybr/intl": "*",
     "@keybr/keyboard": "*",
@@ -22,6 +21,7 @@
     "@keybr/settings-loader": "*",
     "@keybr/theme-designer": "*",
     "@keybr/themes": "*",
+    "@keybr/typing-log": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

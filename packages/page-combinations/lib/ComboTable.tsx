@@ -1,6 +1,6 @@
-import { type ComboStats } from "@keybr/combo-history";
 import { useIntlNumbers } from "@keybr/intl";
 import { useFormatter } from "@keybr/lesson-ui";
+import { type ComboStats, type LessonSteps } from "@keybr/typing-log";
 import { clsx } from "clsx";
 import { Fragment, type ReactNode } from "react";
 import { defineMessage, type MessageDescriptor, useIntl } from "react-intl";
@@ -25,7 +25,7 @@ const columns: readonly Column[] = [
     }),
     title: defineMessage({
       id: "combinations.column.combination.title",
-      defaultMessage: "A single key or a pair of consecutive keys.",
+      defaultMessage: "A combination of consecutive characters.",
     }),
     numeric: false,
   },
@@ -86,7 +86,7 @@ const columns: readonly Column[] = [
     title: defineMessage({
       id: "combinations.column.timeToInitiate.title",
       defaultMessage:
-        "The average time from the previous keystroke to the first key of the combination.",
+        "The average time from the previous keystroke to the first character of the combination.",
     }),
     numeric: true,
   },
@@ -99,7 +99,7 @@ const columns: readonly Column[] = [
     title: defineMessage({
       id: "combinations.column.timeToType.title",
       defaultMessage:
-        "The average time from the previous keystroke to the last key of the combination.",
+        "The average time from the previous keystroke to the last character of the combination.",
     }),
     numeric: true,
   },
@@ -130,12 +130,14 @@ const columns: readonly Column[] = [
 ];
 
 export function ComboTable({
+  lessons,
   stats,
   sort,
   selected,
   onSort,
   onSelect,
 }: {
+  readonly lessons: readonly LessonSteps[];
   readonly stats: readonly ComboStats[];
   readonly sort: Sort;
   readonly selected: string | null;
@@ -223,7 +225,11 @@ export function ComboTable({
               {isSelected && (
                 <tr className={styles.historyRow}>
                   <td colSpan={columns.length}>
-                    <ComboHistory layout={item.layout} combo={item.combo} />
+                    <ComboHistory
+                      lessons={lessons}
+                      layout={item.layout}
+                      combo={item.combo}
+                    />
                   </td>
                 </tr>
               )}

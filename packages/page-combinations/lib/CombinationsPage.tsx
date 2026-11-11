@@ -1,13 +1,14 @@
-import {
-  type ComboSummary,
-  makeComboStats,
-  useComboStorage,
-} from "@keybr/combo-history";
 import { catchError } from "@keybr/debug";
 import { useCollator } from "@keybr/intl";
 import { keyboardProps, Layout, useFormattedNames } from "@keybr/keyboard";
 import { LoadingProgress, Screen } from "@keybr/pages-shared";
 import { useSettings } from "@keybr/settings";
+import {
+  computeStats,
+  type LessonSteps,
+  listLayouts,
+  useTypingLog,
+} from "@keybr/typing-log";
 import {
   Button,
   Field,
@@ -16,44 +17,46 @@ import {
   Para,
   TextField,
 } from "@keybr/widget";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useEffect, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
+import * as styles from "./ComboTable.module.less";
 import { ComboTable } from "./ComboTable.tsx";
+import { downloadLog } from "./download.ts";
+import { parseLength } from "./length.ts";
 import { defaultSort, filterStats, nextSort, sortStats } from "./sort.ts";
 
 export function CombinationsPage(): ReactNode {
-  const summaries = useSummaries();
+  const lessons = useLessons();
   return (
     <Screen>
       <FormattedMessage
         id="page.combinations.content"
         defaultMessage={
           "<h1>Key Combinations</h1>" +
-          "<p>Every single key and every pair of consecutive keys that you type in a completed practice lesson is saved in this browser. Both times are measured from the keystroke right before the combination: the time to initiate ends at its first key, and the time to type ends at its last key. The average times and the speed only count the times the combination was typed without errors.</p>" +
+          "<p>Every key press, key release and typed character of a completed practice lesson is logged in this browser. This page calculates the metrics of every combination of consecutive characters from that log, with any number of characters.</p>" +
+          "<p>Both times are measured from the keystroke right before the combination: the time to initiate ends at its first character, and the time to type ends at its last character. The average times and the speed only count the times the combination was typed without errors.</p>" +
           "<p>Click a column to sort by it, and click a combination to see its complete history.</p>"
         }
       />
-      {summaries == null ? (
+      {lessons == null ? (
         <LoadingProgress />
       ) : (
-        <ComboBrowser summaries={summaries} />
+        <ComboBrowser lessons={lessons} />
       )}
     </Screen>
   );
 }
 
-function useSummaries(): readonly ComboSummary[] | null {
-  const storage = useComboStorage();
-  const [summaries, setSummaries] = useState<readonly ComboSummary[] | null>(
-    null,
-  );
+function useLessons(): readonly LessonSteps[] | null {
+  const storage = useTypingLog();
+  const [lessons, setLessons] = useState<readonly LessonSteps[] | null>(null);
   useEffect(() => {
     let didCancel = false;
     storage
-      .loadSummaries()
-      .then((summaries) => {
+      .loadLessons()
+      .then((lessons) => {
         if (!didCancel) {
-          setSummaries(summaries);
+          setLessons(lessons);
         }
       })
       .catch(catchError);
@@ -61,34 +64,40 @@ function useSummaries(): readonly ComboSummary[] | null {
       didCancel = true;
     };
   }, [storage]);
-  return summaries;
+  return lessons;
 }
 
 const rowsPerPage = 200;
 
 function ComboBrowser({
-  summaries,
+  lessons,
 }: {
-  readonly summaries: readonly ComboSummary[];
+  readonly lessons: readonly LessonSteps[];
 }): ReactNode {
   const { formatMessage } = useIntl();
   const { compare } = useCollator();
   const { settings } = useSettings();
-  const layoutOptions = useLayoutOptions(summaries);
+  const storage = useTypingLog();
+  const layoutOptions = useLayoutOptions(lessons);
   const [layout, setLayout] = useState(() => {
     const { id } = settings.get(keyboardProps.layout);
     return layoutOptions.some(({ value }) => value === id)
       ? id
       : (layoutOptions[0]?.value ?? id);
   });
-  const [keys, setKeys] = useState("all");
+  const [lengthText, setLengthText] = useState("2");
+  const [length, setLength] = useState(2);
   const [minCount, setMinCount] = useState("1");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState(defaultSort);
   const [selected, setSelected] = useState<string | null>(null);
   const [limit, setLimit] = useState(rowsPerPage);
+  const all = useMemo(
+    () => computeStats(lessons, layout, length),
+    [lessons, layout, length],
+  );
 
-  if (summaries.length === 0) {
+  if (lessons.length === 0) {
     return (
       <Para>
         <FormattedMessage
@@ -99,18 +108,18 @@ function ComboBrowser({
     );
   }
 
-  const all = summaries
-    .filter((summary) => summary.layout === layout)
-    .map(makeComboStats);
   const stats = sortStats(
-    filterStats(all, {
-      length: keys === "all" ? null : Number(keys),
-      minCount: Number(minCount),
-      query,
-    }),
+    filterStats(all, { minCount: Number(minCount), query }),
     sort,
     compare,
   );
+  const lengthError =
+    parseLength(lengthText) == null
+      ? formatMessage({
+          id: "combinations.length.invalid",
+          defaultMessage: "Enter a whole number from 1 to 100.",
+        })
+      : null;
 
   return (
     <>
@@ -126,47 +135,42 @@ function ComboBrowser({
             onSelect={(value) => {
               setLayout(value);
               setSelected(null);
+              setLimit(rowsPerPage);
             }}
           />
         </Field>
         <Field>
           <FormattedMessage
-            id="combinations.filter.keys"
-            defaultMessage="Keys:"
+            id="combinations.length.label"
+            defaultMessage="Characters:"
           />
         </Field>
         <Field>
-          <OptionList
-            options={[
-              {
-                value: "all",
-                name: formatMessage({
-                  id: "t_All_keys",
-                  defaultMessage: "All keys",
-                }),
-              },
-              {
-                value: "1",
-                name: formatMessage({
-                  id: "combinations.filter.singleKeys",
-                  defaultMessage: "Single keys",
-                }),
-              },
-              {
-                value: "2",
-                name: formatMessage({
-                  id: "combinations.filter.keyPairs",
-                  defaultMessage: "Key pairs",
-                }),
-              },
-            ]}
-            size={10}
-            value={keys}
-            onSelect={(value) => {
-              setKeys(value);
+          <TextField
+            title={formatMessage({
+              id: "combinations.length.title",
+              defaultMessage:
+                "The number of consecutive characters in a combination.",
+            })}
+            size={6}
+            value={lengthText}
+            error={lengthError}
+            onChange={(value) => {
+              setLengthText(value);
+              const length = parseLength(value);
+              if (length != null) {
+                setLength(length);
+                setSelected(null);
+                setLimit(rowsPerPage);
+              }
             }}
           />
         </Field>
+        {lengthError != null && (
+          <Field>
+            <span className={styles.error}>{lengthError}</span>
+          </Field>
+        )}
         <Field>
           <FormattedMessage
             id="combinations.filter.minCount"
@@ -216,8 +220,30 @@ function ComboBrowser({
             }}
           />
         </Field>
+        <Field>
+          <Button
+            label={formatMessage({
+              id: "combinations.download.label",
+              defaultMessage: "Download the log",
+            })}
+            title={formatMessage({
+              id: "combinations.download.title",
+              defaultMessage:
+                "Save every logged lesson with all its key events as a JSON file.",
+            })}
+            onClick={() => {
+              storage
+                .loadLogs()
+                .then((logs) => {
+                  downloadLog(logs);
+                })
+                .catch(catchError);
+            }}
+          />
+        </Field>
       </FieldList>
       <ComboTable
+        lessons={lessons}
         stats={stats.slice(0, limit)}
         sort={sort}
         selected={selected}
@@ -243,10 +269,10 @@ function ComboBrowser({
   );
 }
 
-function useLayoutOptions(summaries: readonly ComboSummary[]) {
+function useLayoutOptions(lessons: readonly LessonSteps[]) {
   const { formatFullLayoutName } = useFormattedNames();
   const { compare } = useCollator();
-  return [...new Set(summaries.map(({ layout }) => layout))]
+  return listLayouts(lessons)
     .map((id) => {
       const layout = Layout.ALL.get(id, null);
       return {

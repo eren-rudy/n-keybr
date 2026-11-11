@@ -1,13 +1,14 @@
 {
   "private": true,
-  "name": "@keybr/combo-history",
+  "name": "@keybr/typing-log",
   "version": "0.0.0",
   "type": "module",
   "main": "lib/index.ts",
   "types": ".types/index.d.ts",
   "dependencies": {
     "@keybr/indexeddb": "*",
-    "@keybr/textinput": "*"
+    "@keybr/textinput": "*",
+    "@keybr/textinput-events": "*"
   },
   "devDependencies": {},
   "scripts": {

@@ -1,10 +1,10 @@
-import { ComboStorageProvider } from "@keybr/combo-history";
 import { CombinationsPage } from "@keybr/page-combinations";
+import { TypingLogProvider } from "@keybr/typing-log";
 
 export default function Page() {
   return (
-    <ComboStorageProvider>
+    <TypingLogProvider>
       <CombinationsPage />
-    </ComboStorageProvider>
+    </TypingLogProvider>
   );
 }

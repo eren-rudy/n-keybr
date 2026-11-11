@@ -1,8 +1,6 @@
-import { type ComboSample, useComboStorage } from "@keybr/combo-history";
-import { catchError } from "@keybr/debug";
-import { LoadingProgress } from "@keybr/pages-shared";
+import { findSamples, type LessonSteps } from "@keybr/typing-log";
 import { Button } from "@keybr/widget";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useMemo, useState } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import * as styles from "./ComboTable.module.less";
 import { formatCombo, formatUtc, useFormatMilliseconds } from "./format.ts";
@@ -11,34 +9,21 @@ const pageSize = 100;
 
 /** Shows every sample of one combination, the most recent first. */
 export function ComboHistory({
+  lessons,
   layout,
   combo,
 }: {
+  readonly lessons: readonly LessonSteps[];
   readonly layout: string;
   readonly combo: string;
 }): ReactNode {
   const { formatMessage } = useIntl();
   const formatTime = useFormatMilliseconds();
-  const storage = useComboStorage();
-  const [samples, setSamples] = useState<readonly ComboSample[] | null>(null);
+  const samples = useMemo(
+    () => findSamples(lessons, layout, combo).reverse(),
+    [lessons, layout, combo],
+  );
   const [limit, setLimit] = useState(pageSize);
-  useEffect(() => {
-    let didCancel = false;
-    storage
-      .loadSamples(layout, combo)
-      .then((samples) => {
-        if (!didCancel) {
-          setSamples([...samples].reverse());
-        }
-      })
-      .catch(catchError);
-    return () => {
-      didCancel = true;
-    };
-  }, [storage, layout, combo]);
-  if (samples == null) {
-    return <LoadingProgress />;
-  }
   return (
     <div className={styles.history}>
       <p>
