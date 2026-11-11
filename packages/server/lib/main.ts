@@ -4,8 +4,7 @@ import { Container } from "@fastr/invert";
 import { Manifest } from "@keybr/assets";
 import { ConfigModule, Env } from "@keybr/config";
 import { Logger } from "@keybr/logger";
-import { Game } from "@keybr/multiplayer-server";
-import { ApplicationModule, kGame, kMain } from "./app/index.ts";
+import { ApplicationModule, kMain } from "./app/index.ts";
 import { ServerModule } from "./server/module.ts";
 import { Service } from "./server/service.ts";
 
@@ -26,7 +25,6 @@ if (cluster.isPrimary) {
   fork({ args: ["http"] });
   fork({ args: ["http"] });
   fork({ args: ["http"] });
-  fork({ args: ["ws"] });
 } else {
   const container = makeContainer();
   const service = container.get(Service);
@@ -37,14 +35,6 @@ if (cluster.isPrimary) {
         app: container.get(Application, kMain),
         port: Env.getPort("SERVER_PORT", 3000),
       });
-      break;
-    case "ws":
-      process.title = "keybr game server worker process";
-      service.start({
-        app: container.get(Application, kGame),
-        port: Env.getPort("SERVER_PORT_WS", 3001),
-      });
-      container.get(Game).start();
       break;
   }
 }

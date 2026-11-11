@@ -1,13 +1,11 @@
 import { defaultLocale } from "@keybr/intl";
 import {
   mdiAlphabeticalVariant,
-  mdiCarSide,
   mdiChartAreaspline,
   mdiHelpCircleOutline,
   mdiKeyboard,
   mdiKeyboardOutline,
   mdiSpeedometer,
-  mdiTrophyOutline,
 } from "@mdi/js";
 import { defineMessage, type MessageDescriptor } from "react-intl";
 import { type AnonymousUser, type AnyUser, type NamedUser } from "./types.ts";
@@ -159,64 +157,6 @@ export namespace Pages {
         content: defineMessage({
           id: "page.help.description",
           defaultMessage: "The instructions for using this application.",
-        }),
-      },
-    ],
-  } satisfies PageInfo;
-
-  export const highScores = {
-    path: "/high-scores",
-    title: defineMessage({
-      id: "t_High_Scores",
-      defaultMessage: "High Scores",
-    }),
-    link: {
-      label: defineMessage({
-        id: "t_High_Scores",
-        defaultMessage: "High Scores",
-      }),
-      title: defineMessage({
-        id: "page.highScores.description",
-        defaultMessage: "The high score table for the fastest users.",
-      }),
-      icon: mdiTrophyOutline,
-    },
-    meta: [
-      ...meta,
-      {
-        name: "description",
-        content: defineMessage({
-          id: "page.highScores.description",
-          defaultMessage: "The high score table for the fastest users.",
-        }),
-      },
-    ],
-  } satisfies PageInfo;
-
-  export const multiplayer = {
-    path: "/multiplayer",
-    title: defineMessage({
-      id: "t_Multiplayer",
-      defaultMessage: "Multiplayer",
-    }),
-    link: {
-      label: defineMessage({
-        id: "t_Multiplayer",
-        defaultMessage: "Multiplayer",
-      }),
-      title: defineMessage({
-        id: "page.multiplayer.description",
-        defaultMessage: "Online multiplayer type racing game.",
-      }),
-      icon: mdiCarSide,
-    },
-    meta: [
-      ...meta,
-      {
-        name: "description",
-        content: defineMessage({
-          id: "page.multiplayer.description",
-          defaultMessage: "Online multiplayer type racing game.",
         }),
       },
     ],

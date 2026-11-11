@@ -11,11 +11,7 @@ import {
   usePageData,
 } from "@keybr/pages-shared";
 import { ThemePrefs, useTheme } from "@keybr/themes";
-import {
-  CloudflareAnalytics,
-  GoogleTagManager,
-  SetupAds,
-} from "@keybr/thirdparties";
+import { CloudflareAnalytics, GoogleTagManager } from "@keybr/thirdparties";
 import { type ReactNode } from "react";
 import { useIntl } from "react-intl";
 import { isBot } from "./bot.ts";
@@ -36,9 +32,6 @@ export function Shell({
           <>
             <CloudflareAnalytics />
             <GoogleTagManager />
-            <SetupAds>
-              <ScriptAssets entrypoint="ads" />
-            </SetupAds>
           </>
         )}
       </Head>
@@ -109,7 +102,6 @@ function Content({ page }: { readonly page: PageInfo }) {
             Pages.profile,
             Pages.combinations,
             Pages.typingTest,
-            Pages.multiplayer,
             Pages.layouts,
             Pages.help,
           ].map(({ path, link }, index) => (

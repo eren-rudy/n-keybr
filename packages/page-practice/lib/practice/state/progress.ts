@@ -8,7 +8,6 @@ import {
 } from "@keybr/result";
 import { type Settings } from "@keybr/settings";
 import { DailyGoalEvents } from "./event-source-daily-goal.ts";
-import { LetterEvents } from "./event-source-letter.ts";
 import { TopScoreEvents } from "./event-source-top-score.ts";
 import { TopSpeedEvents } from "./event-source-top-speed.ts";
 import {
@@ -35,13 +34,11 @@ export class Progress {
     this.#streakList = new MutableStreakList();
     this.#dailyGoal = new MutableDailyGoal(this.#settings);
 
-    const letter = new LetterEvents(this.#lesson, this.#keyStatsMap);
     const topSpeed = new TopSpeedEvents();
     const topScore = new TopScoreEvents();
     const dailyGoal = new DailyGoalEvents(this.#dailyGoal);
     this.#events = new (class implements LessonEventSource {
       append(result: Result, listener: LessonEventListener): void {
-        letter.append(result, listener);
         topSpeed.append(result, listener);
         topScore.append(result, listener);
         dailyGoal.append(result, listener);

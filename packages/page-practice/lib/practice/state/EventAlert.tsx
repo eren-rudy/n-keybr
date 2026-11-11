@@ -1,4 +1,3 @@
-import { Key } from "@keybr/lesson-ui";
 import { Award, toast } from "@keybr/widget";
 import { FormattedMessage } from "react-intl";
 import { DailyGoalIcon, TrophyIcon } from "./event-icons.tsx";
@@ -6,15 +5,6 @@ import { type LessonEvent } from "./event-types.ts";
 
 export function EventAlert({ event }: { readonly event: LessonEvent }) {
   switch (event.type) {
-    case "new-letter":
-      return (
-        <Award icon={<Key lessonKey={event.lessonKey} size="announcement" />}>
-          <FormattedMessage
-            id="t_ev_New_letter_unlocked"
-            defaultMessage="New letter unlocked!"
-          />
-        </Award>
-      );
     case "top-speed":
       return (
         <Award icon={<TrophyIcon />}>

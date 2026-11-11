@@ -118,19 +118,6 @@ export class Controller {
     return this.renderPage(ctx, Pages.help, intl);
   }
 
-  @http.GET(`${Pages.highScores.path}`)
-  async ["high-scores"](ctx: Context<RouterState & AuthState>) {
-    return this.renderPage(ctx, Pages.highScores);
-  }
-
-  @http.GET(`/{locale:${localePattern}}${Pages.highScores.path}`)
-  async ["high-scores-18n"](
-    ctx: Context<RouterState & AuthState>,
-    @pathParam("locale", pIntl) intl: IntlShape,
-  ) {
-    return this.renderPage(ctx, Pages.highScores, intl);
-  }
-
   @http.GET(`${Pages.layouts.path}`)
   async ["layouts"](ctx: Context<RouterState & AuthState>) {
     return this.renderPage(ctx, Pages.layouts);
@@ -155,19 +142,6 @@ export class Controller {
     @pathParam("locale", pIntl) intl: IntlShape,
   ) {
     return this.renderPage(ctx, Pages.typingTest, intl);
-  }
-
-  @http.GET(`${Pages.multiplayer.path}`)
-  async ["multiplayer"](ctx: Context<RouterState & AuthState>) {
-    return this.renderPage(ctx, Pages.multiplayer);
-  }
-
-  @http.GET(`/{locale:${localePattern}}${Pages.multiplayer.path}`)
-  async ["multiplayer-i18n"](
-    ctx: Context<RouterState & AuthState>,
-    @pathParam("locale", pIntl) intl: IntlShape,
-  ) {
-    return this.renderPage(ctx, Pages.multiplayer, intl);
   }
 
   @http.GET(`${Pages.termsOfService.path}`)

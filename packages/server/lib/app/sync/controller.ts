@@ -3,7 +3,6 @@ import { Context } from "@fastr/core";
 import { BadRequestError } from "@fastr/errors";
 import { injectable } from "@fastr/invert";
 import { type RouterState } from "@fastr/middleware-router";
-import { HighScoresFactory } from "@keybr/highscores";
 import { type NamedUser } from "@keybr/pages-shared";
 import { PublicId } from "@keybr/publicid";
 import { type Result } from "@keybr/result";
@@ -14,10 +13,7 @@ import { type AuthState, pProfileOwner } from "../auth/index.ts";
 @injectable()
 @controller()
 export class Controller {
-  constructor(
-    readonly highScores: HighScoresFactory,
-    readonly userData: UserDataFactory,
-  ) {}
+  constructor(readonly userData: UserDataFactory) {}
 
   @http.GET("/_/sync/data/{id:[a-zA-Z0-9]+}")
   async getPublicData(
@@ -42,7 +38,6 @@ export class Controller {
     const { id } = ctx.state.requireUser();
     const results = await parseResults(value);
     await this.userData.load(new PublicId(id!)).append(results);
-    await this.highScores.append(id!, results);
     ctx.response.status = 204;
   }
 

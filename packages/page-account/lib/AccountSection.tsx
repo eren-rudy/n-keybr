@@ -44,7 +44,7 @@ export function AccountSection({
         <Para>
           <FormattedMessage
             id="account.avatar.description"
-            defaultMessage="Your user image and name as they are visible to the public in your profile, the high scores table, and the multiplayer game."
+            defaultMessage="Your user image and name as they are visible to the public in your profile."
           />
         </Para>
 

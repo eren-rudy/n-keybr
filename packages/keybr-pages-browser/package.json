@@ -11,9 +11,7 @@
     "@keybr/page-account": "*",
     "@keybr/page-combinations": "*",
     "@keybr/page-help": "*",
-    "@keybr/page-highscores": "*",
     "@keybr/page-layouts": "*",
-    "@keybr/page-multiplayer": "*",
     "@keybr/page-practice": "*",
     "@keybr/page-profile": "*",
     "@keybr/page-static": "*",
@@ -24,7 +22,6 @@
     "@keybr/settings-loader": "*",
     "@keybr/theme-designer": "*",
     "@keybr/themes": "*",
-    "@keybr/thirdparties": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

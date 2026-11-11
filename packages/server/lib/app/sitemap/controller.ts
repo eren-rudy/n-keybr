@@ -30,9 +30,7 @@ export function generateSitemapXml(canonicalUrl: string): any {
   for (const page of [
     Pages.practice,
     Pages.help,
-    Pages.highScores,
     Pages.layouts,
-    Pages.multiplayer,
     Pages.typingTest,
   ]) {
     for (const locale of sortedLocales) {

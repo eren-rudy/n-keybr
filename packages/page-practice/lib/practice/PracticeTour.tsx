@@ -1,8 +1,7 @@
-import { KeyLegendList, names } from "@keybr/lesson-ui";
+import { names } from "@keybr/lesson-ui";
 import { Slide, Tour } from "@keybr/widget";
 import { memo } from "react";
 import { FormattedMessage } from "react-intl";
-import { KeyDetailsChartDemo } from "./KeyDetailsChartDemo.tsx";
 
 export const PracticeTour = memo(function PracticeTour({
   onClose,
@@ -88,38 +87,7 @@ export const PracticeTour = memo(function PracticeTour({
           id="m_tour09"
           defaultMessage={
             "<p>This is the typing score indicator in abstract points and the difference from the average value.</p>" +
-            "<p>The score is calculated from your typing speed, error count, and the current size of the letter set. The formula is designed to reward for typing speed, and punish for error count. You cannot obtain a high score by typing fast while also making many errors.</p>" +
-            "<p>Users who score the highest points are recorded in the high score table.</p>"
-          }
-        />
-      </Slide>
-      <Slide size="small" anchor={`#${names.keySet}`} position="block-end">
-        <FormattedMessage
-          id="m_tour10"
-          defaultMessage="<p>This indicator shows the current subset of letters used to generate the lessons, and your confidence level for every letter in the subset:</p>"
-        />
-        <KeyLegendList />
-      </Slide>
-      <Slide size="small" anchor={`#${names.keySet}`} position="block-end">
-        <FormattedMessage
-          id="m_tour11"
-          defaultMessage="<p>This indicator can also be used to predict the remaining number of lessons that are needed to fully unlock a letter, like in the example chart below. Visit it regularly to get more insight on how your learning is going, to see if you are making a progress.</p>"
-        />
-        <KeyDetailsChartDemo />
-      </Slide>
-      <Slide size="small" anchor={`#${names.currentKey}`} position="block-end">
-        <FormattedMessage
-          id="m_tour12"
-          defaultMessage={
-            "<p>This indicator shows details about the letter with increased frequency, which is currently included in every generated word:</p>" +
-            "<dl>" +
-            "<dt>Best typing speed</dt>" +
-            "<dd>Your best typing speed for this individual letter.</dd>" +
-            "<dt>Confidence level</dt>" +
-            "<dd>A number in range from zero to one which is computed using your typing speed, and indicates your familiarity with this letter. A letter is considered fully learned when it’s confidence level reaches one.</dd>" +
-            "<dt>Learning rate</dt>" +
-            "<dd>How your typing speed is changing with each lesson.</dd>" +
-            "</dl>"
+            "<p>The score is calculated from your typing speed, error count, and the current size of the letter set. The formula is designed to reward for typing speed, and punish for error count. You cannot obtain a high score by typing fast while also making many errors.</p>"
           }
         />
       </Slide>

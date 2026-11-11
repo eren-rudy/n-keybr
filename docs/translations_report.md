@@ -1,702 +1,1293 @@
 # English
 
-Translated: 342 messages, 4749 words
+Translated: 343 messages, 4601 words
 
 Untranslated: 0 messages, 0 words
 
 # Afrikaans
 
-Translated: 339 messages, 4744 words
+Translated: 304 messages, 4328 words
 
-Untranslated: 3 messages, 5 words
+Untranslated: 38 messages, 264 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Letters*
 * *Volume:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* ...
 
 # Arabic
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Bulgarian
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Bangla
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Catalan
 
-Translated: 310 messages, 3556 words
+Translated: 279 messages, 3299 words
 
-Untranslated: 30 messages, 1171 words
+Untranslated: 61 messages, 1271 words
 
-* *Errors*
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
 * *Sound theme:*
+* *Time to type*
 * *Explain charts*
+* *Completed (UTC)*
 * *Key sounds only*
-* *Relative Accuracy*
-* *Repeat each word:*
-* *The previous keys are also above the target speed*
-* *Generate lessons that resemble the specified programming lan...*
-* *Practice punctuation characters that are specific to a progr...*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Show color coding of the keyboard zones. Use this option to ...*
-* *Generate typing lessons from the text of a book. All keys ar...*
-* *Highlight a key that must to be pressed next. Use this optio...*
-* *<p>This indicator shows the current subset of letters used t...*
-* *Repeat each word a number of times. Type a word for the firs...*
-* *See how accurate you type relative to other users. The highe...*
-* *Adjust the amount of basic punctuation characters added to t...*
-* *<p>This indicator can also be used to predict the remaining ...*
-* *<p>This is the accuracy indicator and the difference from th...*
+* *Typed at least:*
 * ...
 
 # Czech
 
-Translated: 338 messages, 4742 words
+Translated: 303 messages, 4326 words
 
-Untranslated: 4 messages, 7 words
+Untranslated: 39 messages, 266 words
 
+* *Miss*
 * *Font:*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Syntax:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
 * *Sound theme:*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* ...
 
 # Danish
 
-Translated: 331 messages, 4689 words
+Translated: 299 messages, 4276 words
 
-Untranslated: 9 messages, 38 words
+Untranslated: 41 messages, 294 words
 
+* *Miss*
+* *Keys:*
 * *Score*
-* *Layout*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Layout:*
 * *Layouts*
-* *Position*
-* *Multiplayer*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
 * *Download data*
+* *Completed (UTC)*
 * *Key sounds only*
-* *Repeat each word a number of times. Type a word for the firs...*
+* ...
 
 # German
 
-Translated: 339 messages, 4744 words
+Translated: 305 messages, 4329 words
 
-Untranslated: 3 messages, 5 words
+Untranslated: 37 messages, 263 words
 
-* *Position*
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Alphabet:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* ...
 
 # Greek
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Esperanto
 
-Translated: 77 messages, 1126 words
+Translated: 70 messages, 1079 words
 
-Untranslated: 258 messages, 3565 words
+Untranslated: 266 messages, 3458 words
 
-* *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Miss*
 * *Next*
 * *Time*
 * *Books*
 * *Close*
 * *Font:*
+* *Keys:*
 * *Reset*
-* *Speed*
+* *Total*
 * *Visit*
-* *Errors*
+* *Combos*
+* *Misses*
+* *Result*
 * *Typing*
 * *Zones:*
-* *Layouts*
-* *Lessons*
-* *Lessons*
-* *Not set*
-* *Numbers*
+* *Correct*
+* *Correct*
 * ...
 
 # Spanish
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Estonian
 
-Translated: 338 messages, 4743 words
+Translated: 305 messages, 4329 words
 
-Untranslated: 4 messages, 6 words
+Untranslated: 37 messages, 263 words
 
-* *GO!*
+* *Miss*
 * *Font:*
-* *Progress*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* ...
 
 # Persian
 
-Translated: 295 messages, 2959 words
+Translated: 263 messages, 2701 words
 
-Untranslated: 45 messages, 1768 words
+Untranslated: 77 messages, 1869 words
 
+* *Miss*
 * *Books*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
 * *Syntax:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
 * *Sound theme:*
+* *Time to type*
 * *Top accuracy*
 * *Explain charts*
-* *Key sounds only*
-* *Repeat each word:*
-* *Keyboard hardware emulates layout*
-* *Circle color: {label1} – hit count, {label2} – miss count.*
-* *Practice punctuation characters that are specific to a progr...*
-* *Show color coding of the keyboard zones. Use this option to ...*
-* *Bar color: {label1} – hit count, {label2} – miss count, {lab...*
-* *Generate typing lessons from the text of a book. All keys ar...*
-* *Horizontal axis: lesson number. Vertical axis: typing speed ...*
-* *<a>Benford’s law</a> is an observation that in many real-lif...*
-* *You don’t have any accuracy streaks. Consider completing a l...*
-* *These are the typing assists which help your preserve your c...*
-* *Horizontal axis: lesson number. Vertical axis: {label1} – ty...*
-* *Horizontal axis: lesson number. Vertical axis: {label1} – ty...*
 * ...
 
 # Finnish
 
-Translated: 208 messages, 2284 words
+Translated: 193 messages, 2222 words
 
-Untranslated: 128 messages, 2409 words
+Untranslated: 144 messages, 2317 words
 
-* *GO!*
+* *Miss*
 * *Time*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Layouts*
 * *Metrics*
 * *Not set*
 * *Syntax:*
-* *Position*
 * *Practice*
 * *Settings*
+* *Key pairs*
+* *Show more*
 * *Top speed*
 * *Uncertain*
 * *Characters*
-* *Top speed!*
-* *High Scores*
-* *Multiplayer*
-* *Smoothness:*
-* *Play sounds:*
-* *Average speed*
-* *Benford’s law*
-* *Download data*
 * ...
 
 # Faroese
 
-Translated: 44 messages, 583 words
+Translated: 41 messages, 565 words
 
-Untranslated: 290 messages, 4097 words
+Untranslated: 295 messages, 3972 words
 
-* *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Miss*
 * *Next*
 * *Time*
 * *Books*
 * *Close*
 * *Font:*
+* *Keys:*
 * *Reset*
 * *Speed*
-* *Speed*
+* *Total*
 * *Visit*
-* *Errors*
-* *Layout*
+* *Combos*
+* *Misses*
+* *Result*
 * *Typing*
 * *Zones:*
 * *Account*
-* *Layout:*
-* *Layouts*
 * ...
 
 # French
 
-Translated: 333 messages, 4544 words
+Translated: 299 messages, 4129 words
 
-Untranslated: 9 messages, 205 words
+Untranslated: 43 messages, 463 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
 * *Options*
 * *Volume:*
-* *Position*
 * *Alphabet:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
-* *Above are listed the longest continuous sequences of lessons...*
-* *When you focus on a new key, it is very likely that the spee...*
-* *The target speed is used to measure the confidence level and...*
+* ...
 
 # Irish
 
-Translated: 337 messages, 4735 words
+Translated: 302 messages, 4319 words
 
-Untranslated: 5 messages, 14 words
+Untranslated: 40 messages, 273 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
 * *Smoothness:*
+* *Typing Test*
 * *Sound theme:*
+* *Time to type*
 * *M|T|W|T|F|S|S*
+* *Completed (UTC)*
 * *Key sounds only*
+* ...
 
 # Hebrew
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Croatian
 
-Translated: 337 messages, 4740 words
+Translated: 303 messages, 4325 words
 
-Untranslated: 5 messages, 9 words
+Untranslated: 39 messages, 267 words
 
+* *Miss*
 * *Font:*
+* *Keys:*
 * *Reset*
-* *Multiplayer*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
-* *Premium account price:*
+* *Typed at least:*
+* *Key Combinations*
+* ...
 
 # Hungarian
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Indonesian
 
-Translated: 339 messages, 4744 words
+Translated: 305 messages, 4329 words
 
-Untranslated: 3 messages, 5 words
+Untranslated: 37 messages, 263 words
 
-* *GO!*
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Volume:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* ...
 
 # Icelandic
 
-Translated: 95 messages, 1742 words
+Translated: 88 messages, 1695 words
 
-Untranslated: 240 messages, 2949 words
+Untranslated: 248 messages, 2842 words
 
-* *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Miss*
 * *Next*
 * *Time*
 * *Books*
 * *Close*
 * *Font:*
+* *Keys:*
 * *Reset*
 * *Retry*
-* *Speed*
+* *Total*
 * *Visit*
-* *Errors*
+* *Combos*
+* *Misses*
+* *Result*
 * *Typing*
 * *Zones:*
 * *Account*
-* *Layouts*
-* *Lessons*
-* *Metrics*
 * ...
 
 # Italian
 
-Translated: 334 messages, 4738 words
+Translated: 300 messages, 4323 words
 
-Untranslated: 7 messages, 9 words
+Untranslated: 41 messages, 267 words
 
+* *Miss*
 * *Font:*
-* *Layout*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Account*
+* *Correct*
+* *Correct*
 * *Layout:*
 * *Layouts*
 * *Volume:*
-* *Key sounds only*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
+* ...
 
 # Japanese
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Korean
 
-Translated: 145 messages, 1297 words
+Translated: 116 messages, 1122 words
 
-Untranslated: 195 messages, 3430 words
+Untranslated: 224 messages, 3448 words
 
 * *Copy*
 * *Done*
+* *Miss*
 * *Next*
 * *Books*
 * *Close*
 * *Font:*
+* *Keys:*
 * *Reset*
+* *Total*
 * *Visit*
+* *Combos*
+* *Misses*
+* *Result*
 * *Typing*
 * *Zones:*
+* *Correct*
+* *Correct*
 * *Lessons*
 * *Not set*
-* *Options*
-* *Preview*
-* *Syntax:*
-* *Volume:*
-* *All keys*
-* *Chapters*
-* *Keyboard*
-* *Previous*
 * ...
 
 # Lithuanian
 
-Translated: 305 messages, 3388 words
+Translated: 273 messages, 3130 words
 
-Untranslated: 34 messages, 1330 words
+Untranslated: 66 messages, 1431 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
 * *Accuracy Streaks*
-* *Relative Accuracy*
-* *No accuracy streaks.*
-* *Practice numbers only.*
-* *The difference from the average value.*
-* *Download all your typing data in JSON format.*
-* *The detailed statistics regarding your learning progress.*
-* *Permanently delete all of your typing data and reset statist...*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Adjust the number of words in the lesson text. Making lesson...*
-* *Show color coding of the keyboard zones. Use this option to ...*
-* *Are you sure you want to delete all data and reset your prof...*
-* *You don’t have any accuracy streaks. Consider completing a l...*
-* *Highlight a key that must to be pressed next. Use this optio...*
-* *<p>This indicator shows the current subset of letters used t...*
-* *Repeat each word a number of times. Type a word for the firs...*
-* *See how accurate you type relative to other users. The highe...*
-* *Manually unlock the remaining letters. Use this option if wa...*
-* *Adjust the amount of capital letters added to the lesson tex...*
+* *Key Combinations*
+* *Last typed (UTC)*
 * ...
 
 # Mongolian
 
-Translated: 16 messages, 378 words
+Translated: 16 messages, 370 words
 
-Untranslated: 316 messages, 4273 words
+Untranslated: 318 messages, 4138 words
 
-* *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Miss*
 * *Next*
 * *Time*
-* *User*
 * *Books*
 * *Close*
 * *Font:*
+* *Keys:*
 * *Reset*
 * *Retry*
 * *Score*
 * *Speed*
-* *Speed*
+* *Total*
 * *Visit*
+* *Combos*
 * *Digits*
-* *Errors*
-* *Layout*
+* *Misses*
 * *Resend*
 * ...
 
 # Norwegian Bokmål
 
-Translated: 211 messages, 2446 words
+Translated: 182 messages, 2186 words
 
-Untranslated: 126 messages, 2250 words
+Untranslated: 155 messages, 2353 words
 
 * *Done*
 * *Help*
+* *Miss*
 * *Books*
 * *Font:*
-* *Speed*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Account*
+* *Correct*
+* *Correct*
 * *Accuracy*
 * *Settings*
 * *Alphabet:*
 * *Examples:*
+* *Key pairs*
+* *Show more*
 * *All sounds*
-* *Daily goal*
-* *Last speed*
-* *Custom text*
-* *Daily goal:*
-* *Smoothness:*
-* *Whitespace:*
-* *Cursor shape:*
-* *Learning rate*
-* *No whitespace*
 * ...
 
 # Nepali
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Dutch
 
-Translated: 333 messages, 4736 words
+Translated: 299 messages, 4321 words
 
-Untranslated: 8 messages, 11 words
+Untranslated: 42 messages, 269 words
 
+* *Miss*
+* *Keys:*
 * *Score*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
 * *Account*
+* *Correct*
+* *Correct*
 * *Letters*
 * *Volume:*
-* *Multiplayer*
-* *Key sounds only*
-* *Premium account*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
+* ...
 
 # Polish
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Brazilian Portuguese
 
-Translated: 338 messages, 4743 words
+Translated: 304 messages, 4328 words
 
-Untranslated: 4 messages, 6 words
+Untranslated: 38 messages, 264 words
 
-* *Layout*
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Layout:*
 * *Layouts*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* ...
 
 # European Portuguese
 
-Translated: 319 messages, 4618 words
+Translated: 286 messages, 4206 words
 
-Untranslated: 21 messages, 109 words
+Untranslated: 54 messages, 364 words
 
+* *Miss*
 * *Books*
-* *Layout*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
 * *Layout:*
 * *Layouts*
 * *Volume:*
+* *Key pairs*
+* *Show more*
 * *Top score!*
 * *Top speed!*
-* *Sound theme:*
-* *Top accuracy*
-* *Explain charts*
-* *Key sounds only*
-* *Average accuracy*
-* *Relative Accuracy*
-* *Repeat each word:*
-* *Daily goal reached!*
-* *New letter unlocked!*
-* *Premium account price:*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Repeat each word a number of times. Type a word for the firs...*
+* *Combination*
+* *Single keys*
+* *Typing Test*
 * ...
 
 # Romanian
 
-Translated: 298 messages, 3587 words
+Translated: 271 messages, 3244 words
 
-Untranslated: 37 messages, 1118 words
+Untranslated: 66 messages, 1318 words
 
+* *Miss*
 * *Font:*
-* *Layout*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
 * *Account*
+* *Correct*
+* *Correct*
 * *Layout:*
 * *Layouts*
+* *Key pairs*
+* *Show more*
 * *Translate*
-* *Multiplayer*
+* *Combination*
+* *Single keys*
+* *Typing Test*
 * *Sound theme:*
-* *Top accuracy*
-* *Forgive errors*
-* *Key sounds only*
-* *Average accuracy*
-* *Relative Accuracy*
-* *Repeat each word:*
-* *Start in {countDown}*
-* *Premium account price:*
-* *Enter full-screen mode.*
-* *<h1>Connecting to Server...</h1><p>Establishing connection t...*
-* *<p>The precise meaning of each indicator color is given in t...*
 * ...
 
 # Russian
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Slovak
 
-Translated: 340 messages, 4745 words
+Translated: 305 messages, 4329 words
 
-Untranslated: 2 messages, 4 words
+Untranslated: 37 messages, 263 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Syntax:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* ...
 
 # Slovenian
 
-Translated: 340 messages, 4745 words
+Translated: 305 messages, 4329 words
 
-Untranslated: 2 messages, 4 words
+Untranslated: 37 messages, 263 words
 
+* *Miss*
 * *Font:*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* ...
 
 # Albanian
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Swedish
 
-Translated: 338 messages, 4743 words
+Translated: 304 messages, 4328 words
 
-Untranslated: 4 messages, 6 words
+Untranslated: 38 messages, 264 words
 
-* *Layout*
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
 * *Layout:*
 * *Syntax:*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* ...
 
 # Thai
 
-Translated: 329 messages, 4635 words
+Translated: 294 messages, 4219 words
 
-Untranslated: 11 messages, 92 words
+Untranslated: 46 messages, 351 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
 * *Sound theme:*
+* *Time to type*
 * *Top accuracy*
+* *Completed (UTC)*
 * *Key sounds only*
-* *Average accuracy*
-* *Relative Accuracy*
-* *Repeat each word:*
-* *Premium account price:*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Repeat each word a number of times. Type a word for the firs...*
-* *See how accurate you type relative to other users. The highe...*
+* *Typed at least:*
+* ...
 
 # Turkish
 
-Translated: 227 messages, 2126 words
+Translated: 201 messages, 2029 words
 
-Untranslated: 110 messages, 2568 words
+Untranslated: 137 messages, 2519 words
 
+* *Miss*
 * *Books*
 * *Font:*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
 * *Zones:*
+* *Correct*
+* *Correct*
 * *Metrics*
 * *Preview*
 * *Sign-In*
 * *Syntax:*
 * *Alphabet:*
+* *Key pairs*
+* *Show more*
 * *Box cursor*
-* *Line cursor*
-* *Source code*
-* *Whitespace:*
-* *Block cursor*
-* *Top accuracy*
-* *No whitespace*
-* *Smooth cursor*
-* *Bar whitespace*
-* *Emulate layout*
-* *Explain charts*
-* *Highlight keys*
+* *Combination*
 * ...
 
 # Ukrainian
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Vietnamese
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Simplified Chinese
 
-Translated: 340 messages, 4739 words
+Translated: 305 messages, 4323 words
 
-Untranslated: 2 messages, 10 words
+Untranslated: 37 messages, 269 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
 * *M|T|W|T|F|S|S*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* ...
 
 # Traditional Chinese
 
-Translated: 341 messages, 4746 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 1 messages, 3 words
+Untranslated: 36 messages, 262 words
 
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...
 
 # Chinese (Taiwan)
 
-Translated: 340 messages, 4745 words
+Translated: 306 messages, 4330 words
 
-Untranslated: 2 messages, 4 words
+Untranslated: 36 messages, 262 words
 
-* *GO!*
+* *Miss*
+* *Keys:*
+* *Total*
+* *Combos*
+* *Misses*
+* *Result*
+* *Correct*
+* *Correct*
+* *Key pairs*
+* *Show more*
+* *Combination*
+* *Single keys*
+* *Typing Test*
+* *Time to type*
+* *Completed (UTC)*
 * *Key sounds only*
+* *Typed at least:*
+* *Key Combinations*
+* *Last typed (UTC)*
+* *Time to initiate*
+* ...

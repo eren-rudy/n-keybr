@@ -70,8 +70,8 @@ lage's scoping, e.g. `npx lage test --scope @keybr/lesson`.
   `tsconfig.json`, and its own `package.json` declaring intra-repo deps via `"@keybr/x": "*"`.
   Compiled output/types land in `.types/` (gitignored).
 - `packages/page-*` — one package per top-level app section (`page-practice`, `page-profile`,
-  `page-account`, `page-multiplayer`, `page-highscores`, `page-help`, `page-static`,
-  `page-typing-test`, `page-layouts`). Each is UI-only React code for that section.
+  `page-account`, `page-combinations`, `page-help`, `page-static`, `page-typing-test`,
+  `page-layouts`). Each is UI-only React code for that section.
 - `packages/keybr-pages-shared`, `keybr-pages-browser`, `keybr-pages-server` — the three
   compose the page-* packages into the actual app:
   - `pages-shared` — code shared between browser and server (route table `pages.ts`, root layout,
@@ -80,7 +80,7 @@ lage's scoping, e.g. `npx lage test --scope @keybr/lesson`.
     packages into the SPA, handles routing/navigation chrome.
   - `pages-server` — SSR-side rendering of the shell around the same route table.
 - `packages/server` — the Fastr-based (`@fastr/*`) HTTP server: routing, sessions, DB access,
-  OAuth, multiplayer websocket server, third-party integrations (Paddle payments). `root/index.js`
+  OAuth, third-party integrations (Paddle payments). `root/index.js`
   is the actual process entrypoint that requires `_config.js` then the compiled server.
 - `root/` — the bundled output of both the server backend (compiled from `packages/server`) and
   the browser frontend (webpack output from `packages/keybr-pages-browser`). This is the unit of
@@ -95,8 +95,6 @@ lage's scoping, e.g. `npx lage test --scope @keybr/lesson`.
   layer, built on `knex`/`objection`.
 - `packages/keybr-content*`, `keybr-lang`, `keybr-phonetic-model*` — per-language lesson content
   (books, quotes, word lists) and language-specific phonetic models used to generate lessons.
-- `packages/keybr-multiplayer-*` — real-time multiplayer typing races (shared protocol, server,
-  UI).
 - `packages/tsl` — the in-house TypeScript loader/test runner (`tsnode`, `tstest`) used by every
   package's `compile`/`test` scripts instead of ts-node/Jest.
 - `packages/test-env-*` — shared test setup packages (`--import`ed by `tstest`, see above).

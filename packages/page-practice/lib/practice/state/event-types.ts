@@ -1,10 +1,4 @@
-import { type LessonKey } from "@keybr/lesson";
 import { type Result } from "@keybr/result";
-
-export type NewLetterEvent = {
-  readonly type: "new-letter";
-  readonly lessonKey: LessonKey;
-};
 
 export type TopSpeedEvent = {
   readonly type: "top-speed";
@@ -22,11 +16,7 @@ export type DailyGoalEvent = {
   readonly type: "daily-goal";
 };
 
-export type LessonEvent =
-  | NewLetterEvent
-  | TopSpeedEvent
-  | TopScoreEvent
-  | DailyGoalEvent;
+export type LessonEvent = TopSpeedEvent | TopScoreEvent | DailyGoalEvent;
 
 export type LessonEventListener = (event: LessonEvent) => void;
 
